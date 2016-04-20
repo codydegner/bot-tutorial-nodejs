@@ -11,9 +11,9 @@ function respond() {
       codyRegex = /^\/cody$/;
       annaRegex = /^\/anna$/;
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && baileyRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage("Existence is torment.");
     this.res.end();
   } else {
     console.log("don't care");
@@ -22,10 +22,10 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(var message) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = message;
 
   options = {
     hostname: 'api.groupme.com',
